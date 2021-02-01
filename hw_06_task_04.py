@@ -34,8 +34,8 @@ class TownCar(Car):
     speed_limit = 60
 
     def show_speed(self):
-        print(f"{self.speed} is too high for {self.name}" if self.speed >
-              self.speed_limit else super().show_speed())
+        print(f"{self.speed} is too high for {self.name}") if self.speed > self.speed_limit else super(
+        ).show_speed()
 
 
 class SportCar(Car):
@@ -46,8 +46,8 @@ class WorkCar(Car):
     speed_limit = 40
 
     def show_speed(self):
-        print(f"{self.speed} is too high for {self.name}" if self.speed >
-              self.speed_limit else super().show_speed())
+        print(f"{self.speed} is too high for {self.name}") if self.speed > self.speed_limit else super(
+        ).show_speed()
 
 
 class PoliceCar(Car):
@@ -80,4 +80,3 @@ tc = TownCar(50, "red", "Toyota Corolla")
 tc.go()
 tc.turn(direction[randint(0, 1)])
 tc.show_speed()
-# при вызове super().show_speed() выводит сообщение о скорости, и еще None.Почему?
